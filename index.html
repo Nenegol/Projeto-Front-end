@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="testeM.css">
+    <link rel="stylesheet" type="text/css" href="testeL.css">
+    <link rel="stylesheet" type="text/css" href="testeinf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/primer-css/build/build.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="code.js"></script>
+  </head>
+<body>
+    <!--Main-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <img class="logo" src="icon.png" class="card-link" onclick="openPage('Home', this)"></img>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('Login', this)" id="lg">Login
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="about">About</a>
+              </li>
+            </ul>
+            <div class="hidden" id="show">
+              <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('Home', this)">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('Movies', this)">Movies
+                  <span class="sr-only">(current)</span>
+                </a>
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('Directors', this)">Directors
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('Actors', this)">Actors
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('Studios', this)">Studios
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('edit', this)">Profile
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <button type="button" class="btn btn-outline-none">
+                <i class="fa fa-bell"></i> <span class="badge badge-success">9</span>
+                <span class="sr-only">unread messages</span>
+              </button>
+              <button type="button" onclick="y()" class="btn btn-outline-none "><i class="fa fa-power-off"></i></button>
+            </ul>
+            </div>
+          </div>
+        </div>
+     </nav>
+
+         <div class="tabcontent" id="Login">
+          <div class="form_bg">
+            <div class="container">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6" >
+                  <form class="form_horizontal">
+                    <div class="form_icon"><i class="fa fa-user-circle"></i></div>
+                    <h3 class="title">Login</h3>
+                    <div class="form-group">
+                      <span class="input-icon"><i class="fa fa-user"></i></span>
+                      <input id="username" class="form-control" type="username" placeholder="username" required >
+                    </div>
+                    <div class="form-group">  
+                      <span class="input-icon"><i class="fa fa-lock"></i></span>
+                      <input id="password" class="form-control" type="password" placeholder="password" required>
+                    </div>             
+                    <button class="btn signin" onclick="login()">Login</button>
+                    <ul class="form-options">
+                      <li><a onclick="openPage('Recovery', this)" >Forgot Username/Password?</a></li>
+                      <li><a onclick="openPage('Register', this)">Create New Account <i class="fa fa-arrow-right"></i></a></li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="tabcontent" id="Home">
+          <div class="container">
+            <div class="row">
+              <p class="h1" onclick="openPage('Movies', this)">Movies</p>
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                        <div class="card">  
+                          <img src="50.jpg" onclick="openPage('50', this)" class="card-img-top" alt="1" width="280" height="525">
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('50', this)">50 shades of Grey</h5>
+                            <p class="card-text">Romance</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="terminator-dark-fate.jpg" onclick="openPage('Terminator', this)" class="card-img-top" alt="1" width="280" height="525">
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Terminator', this)">Terminator: Dark Fate</h5>
+                          <p class="card-text">Action/Science fiction</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Transformer.jpg" onclick="openPage('Transformers', this)" class="card-img-top" alt="1" width="280" height="525">
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Transformers', this)">Transformers: The Last Knight</h5>
+                          <p class="card-text">Action/Adventure/Science fiction</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <p class="h1" onclick="openPage('Directors', this)">Directors </p>
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="sam.jpg" onclick="openPage('Sam Taylor-Johnson', this)" class="card-img-top" alt="3" width="280" height="500">
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Sam Taylor-Johnson', this)">Sam Taylor-Johnson</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="james.jpg" onclick="openPage('James Cameron', this)" class="card-img-top" alt="3" width="280" height="500">
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('James Cameron', this)">James Cameron</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="michael.jpg" onclick="openPage('Michael Bay', this)" class="card-img-top" alt="3" width="280" height="500">
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Michael Bay', this)">Michael Bay</h5>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <p class="h1" onclick="openPage('Actors', this)">Actors</p>
+                <div class="row row-cols-1 row-cols-md-3">
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img src="jamie.jpg" class="card-img-top" alt="3" width="280" height="500">
+                      <div class="card-body">
+                        <h5 class="card-title" onclick="openPage('Jamie Dornan', this)">Jamie Dornan</h5>
+                        <p class="card-text">Born 1 May 1982, is a North Irish actor, model and musician. <a class="card-link" onclick="openPage('Jamie Dornan', this)">More</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img src="Arnold.jpg" class="card-img-top" alt="3" width="280" height="500">
+                      <div class="card-body">
+                        <h5 class="card-title" onclick="openPage('Arnold Schwarzenegger', this)">Arnold Schwarzenegger</h5>
+                        <p class="card-text">Born 19 July 1947, is an Austro-American bodybuilder, actor, businessman...<a class="card-link" onclick="openPage('Arnold Schwarzenegger', this)">More</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img src="mark.jpg" class="card-img-top" alt="3" width="280" height="500">
+                      <div class="card-body">
+                        <h5 class="card-title" onclick="openPage('Mark Wahlberg', this)">Mark Wahlberg</h5>
+                        <p class="card-text">Born 5 June 1971, is an American actor, rapper and film and television...<a class="card-link" onclick="openPage('Mark Wahlberg', this)">More</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="h1" onclick="openPage('Studios', this)">Studios</p>
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img src="universal.jpg" onclick="openPage('Universal', this)" class="card-img-top" alt="2" width="280" height="300">
+                      <div class="card-body">
+                        <h5 class="card-title" onclick="openPage('Universal', this)">Universal Pictures</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img src="lionsgate.jpg" onclick="openPage('Lions', this)" class="card-img-top" alt="2" width="280" height="300">
+                      <div class="card-body">
+                        <h5 class="card-title" onclick="openPage('Lions', this)">Lions Gate Entertainment</h5>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div> 
+
+        <!--MOVIES-->
+        <div class="tabcontent" id="Movies">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Movies</p>
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                        <div class="card">  
+                          <img src="50.jpg" onclick="openPage('50', this)" class="card-img-top" alt="1" width="280" height="525">
+                          <button onclick="a1(this)" type="button" class="btn btn-dark" id="bm1">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('50', this)">50 shades of Grey </h5>
+                            <p class="card-text">Romance</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="terminator-dark-fate.jpg" onclick="openPage('Terminator', this)" class="card-img-top" alt="1" width="280" height="525">
+                        <button onclick="a2(this)" type="button" class="btn btn-dark" id="bm2">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Terminator', this)">Terminator: Dark Fate</h5>
+                          <p class="card-text">Action/Science fiction</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Transformer.jpg" onclick="openPage('Transformers', this)" class="card-img-top" alt="1" width="280" height="525">
+                        <button onclick="a3(this)" type="button" class="btn btn-dark" id="bm3">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Transformers', this)">Transformers: The Last Knight</h5>
+                          <p class="card-text">Action/Adventure/Science fiction</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="mortal-engines.jpg" onclick="openPage('Mortal', this)" class="card-img-top" alt="1" width="280" height="525">
+                        <button onclick="a4(this)" type="button" class="btn btn-dark" id="bm4">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Mortal', this)">Mortal Engines</h5>
+                          <p class="card-text">Adventure/Science fiction</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="civil war.jpg" onclick="openPage('Captain', this)" class="card-img-top" alt="1" width="280" height="525">
+                          <button onclick="a5(this)" type="button" class="btn btn-dark" id="bm5">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Captain', this)">Captain America: Civil War</h5>
+                            <p class="card-text">Action/Adventure</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <img src="jogador 1.jpg" onclick="openPage('Ready', this)" class="card-img-top" alt="1" width="280" height="525">
+                          <button onclick="a6(this)" type="button" class="btn btn-dark" id="bm6">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Ready', this)">Ready Player One</h5>
+                            <p class="card-text">Action/Adventure</p>
+                          </div>
+                        </div>  
+                      </div>                     
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="50">
+          <div class="container">
+            <div class="row">
+              <p class="h1">50 shades of Grey</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Resume</h5>
+                    <p class="p-0">
+                        Literature student Anastasia Steele, 21, interviews young billionaire Christian Gray as a favor to his roommate Kate Kavanagh. She sees him as an attractive and brilliant man, and he is equally fascinated by her. Although sexually inexperienced, Anastasia dives headlong into this relationship and discovers the pleasures of sadomasochism, becoming the subject of submission by the enigmatic Gray.                
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Director: </h5>
+                        <a class="a" onclick="openPage('Sam Taylor-Johnson', this)">Sam Taylor-Johnson</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Actors : </h5>
+                        <a class="a" onclick="openPage('Jamie Dornan', this)">Jamie Dornan</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Distributed by : </h5>
+                        <a class="a" onclick="openPage('Universal', this)">Universal Pictures</a>
+                    </div>
+
+                </div>
+                <img src="50.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+        
+        <div class="tabcontent" id="Terminator">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Terminator: Dark Fate</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Resume</h5>
+                    <p class="p-0">
+                        A young female Mexican worker, Dani Ramos, is hunted down by a virtually indestructible terminator from the future called a REV-9. However, she is protected by an enhanced human named Grace who is also from the future. They flee from the unstoppable terminator and, out of the blue, Sarah Connor helps them on the road. All three head to Laredo, Texas, where Grace has the coordinates of a possible support and where they meet a T-800 who is living in an isolated location with his family. The group teams up to try to destroy the REV-9..                
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Director: </h5>
+                        <a class="a" onclick="openPage('James Cameron', this)">James Cameron</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Actors : </h5>
+                        <a class="a" onclick="openPage('Arnold Schwarzenegger', this)">Arnold Schwarzenegger</a>
+                    </div>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Distributed by : </h5>
+                      <a class="a" onclick="openPage('Walt', this)">Walt Disney Pictures</a>
+                  </div>
+
+                </div>
+                <img src="terminator-dark-fate.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Transformers">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Transformers: The Last Knight</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Resume</h5>
+                    <p class="p-0">
+                        Three years after Optimus Prime left Earth, the Autobots are still a world threat and they are at war with the Decepticons. Cade Yeager (Mark Wahlberg) finds a Talisman given from a dying Transformer. However, the U.S. Military and the Decepticons find Cade and the Autobots and are now on the run again. Cade meets a Transformer known as Cogman and tells him and Bumblebee to head to London with him. They meet with an English Lord known as Sir Edmund Burton (Sir Anthony Hopkins) and head to a Cybertronian Knights ship underwater. They encounter Optimus Prime, but he's now evil and his master is Quintessa. Quintessa's intention is to collide Cybertron and Earth so Cybertron can begin again. and it's up to Cade, an English professor known as Vivian Wembley (Laura Haddock), Sir Edmund Burton, Cogman, Bumblebee and the rest of the Autobots to save the world.                
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Director: </h5>
+                        <a class="a" onclick="openPage('Michael Bay', this)">Michael Bay</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Actors : </h5>
+                        <a class="a" onclick="openPage('Mark Wahlberg', this)">Mark Wahlberg</a>
+                    </div>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Distributed by : </h5>
+                      <a class="a" onclick="openPage('Columbia', this)">Columbia Pictures</a>
+                  </div>
+
+                </div>
+                <img src="Transformer.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+        
+        <div class="tabcontent" id="Mortal">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Mortal Engines</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Resume</h5>
+                    <p class="p-0">
+                    The Earth is destroyed and to survive the cities move on giant wheels, known as Traction Cities, and fight with others to obtain more natural resources. When London becomes involved in an attack, Tom is thrown out of the city along with an outlaw, and the two together must fight to survive and still face a threat that puts life on the planet at risk.                
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Director: </h5>
+                        <a class="a" onclick="openPage('Peter Jackson', this)">Peter Jackson</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Actors : </h5>
+                        <a class="a" onclick="openPage('Stephen Lang', this)">Stephen Lang</a>
+                    </div>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Distributed by : </h5>
+                      <a class="a" onclick="openPage('Universal', this)">Walt Disney Pictures</a>
+                  </div>
+
+                </div>
+                <img src="mortal-engines.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Captain">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Captain America: Civil War</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Resume</h5>
+                    <p class="p-0">
+                        After another international incident involving the Avengers, world leaders and political powers move to get the Avengers to be registered in lieu of previous missions that have caused collateral damage. This results in the Avengers having to decide whether to remain free or to be registered. It also results in two factions with one led by Captain America, who believes that heroes should remain free and the other led by Iron Man, who surprisingly begins supporting government regulation and oversight. And all the while, Cap must try and protect his old friend Bucky from both Tony and the schemes of a new villain who emerges with a plan that could shock the world.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Director: </h5>
+                        <a class="a" onclick="openPage('Russo brothers', this)">Russo brothers</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Actors : </h5>
+                        <a class="a" onclick="openPage('Chris Evans', this)">Chris Evans</a>
+                    </div>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Distributed by : </h5>
+                      <a class="a" onclick="openPage('Walt', this)">Walt Disney Pictures</a>
+                  </div>
+
+                </div>
+                <img src="civil war.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Ready">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Ready Player One</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Resume</h5>
+                    <p class="p-0">
+                        In the year 2045, the real world is a harsh place. The only time Wade Watts (Tye Sheridan) truly feels alive is when he escapes to the OASIS, an immersive virtual universe where most of humanity spends their days. In the OASIS, you can go anywhere, do anything, be anyone-the only limits are your own imagination. The OASIS was created by the brilliant and eccentric James Halliday (Mark Rylance), who left his immense fortune and total control of the Oasis to the winner of a three-part contest he designed to find a worthy heir. When Wade conquers the first challenge of the reality-bending treasure hunt, he and his friends-aka the High Five-are hurled into a fantastical universe of discovery and danger to save the OASIS.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Director: </h5>
+                        <a class="a" onclick="openPage('Steven Spielberg', this)">Steven Spielberg</a>
+                    </div>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Actors : </h5>
+                        <a class="a" onclick="openPage('Tye Sheridan', this)">Tye Sheridan</a>
+                    </div>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Distributed by : </h5>
+                      <a class="a" onclick="openPage('Warner', this)">Warner Bros. Pictures</a>
+                  </div>
+
+                </div>
+                <img src="jogador 1.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--DIRECTORS-->
+        <div class="tabcontent" id="Directors">
+          <div class="container">
+            <div class="row">
+                <p class="h1">Directors</p>
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                      <div class="card dir">
+                        <img src="sam.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="d1(this)" type="button" class="btn btn-dark" id="bd1">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Sam Taylor-Johnson', this)">Sam Taylor-Johnson</h5>
+                          <p class="card-text">Born 8 October 1963, is an English film director who has directed films, short films, and television productions. <a class="card-link" onclick="openPage('Sam Taylor-Johnson', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card dir">
+                        <img src="james.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="d2(this)" type="button" class="btn btn-dark" id="bd2">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('James Cameron', this)">James Cameron</h5>
+                          <p class="card-text">Born 16 August 1954, is a Canadian film-maker, producer, screenwriter and editor.
+                            He was the first to produce and...<a class="card-link" onclick="openPage('James Cameron', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="michael.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="d3(this)" type="button" class="btn btn-dark" id="bd3">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Michael Bay', this)">Michael Bay</h5>
+                          <p class="card-text">Born 17 February 1965, is an American film director and producer. It is known for producing action films with...<a class="card-link" onclick="openPage('Michael Bay', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Peter.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="d4(this)" type="button" class="btn btn-dark" id="bd4">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Peter Jackson', this)">Peter Jackson</h5>
+                          <p class="card-text">Born 31 October 1961, is a New Zealander screenwriter, film-maker and film producer. 
+                            Became known for directing...<a class="card-link" onclick="openPage('Peter Jackson', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="Russo.jpg" class="card-img-top" alt="3" width="280" height="500">
+                          <button onclick="d5(this)" type="button" class="btn btn-dark" id="bd5">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Russo brothers', this)">Russo brothers</h5>
+                            <p class="card-text">They are American directors, producers, screenwriters, and actors. They are best known for directing four films...<a class="card-link" onclick="openPage('Russo brothers', this)">More</a></p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="steven.jpg" class="card-img-top" alt="3" width="280" height="500">
+                          <button onclick="d6(this)" type="button" class="btn btn-dark" id="bd6">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Steven Spielberg', this)">Steven Spielberg</h5>
+                            <p class="card-text">Born 19 December 1946, is an award-winning film-maker, film producer, screenwriter and American... <a class="card-link" onclick="openPage('Steven Spielberg', this)">More</a></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+      
+        <div class="tabcontent" id="Sam Taylor-Johnson">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Sam Taylor-Johnson</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                        Born 4 March 1967, is an English film-maker and photographer. Her debut as a film director happened in 2009 with Nowhere Boy,  a film based on the childhood experiences of the Beatles songwriter and singer John Lennon. She is one of a group of artists known as the Young British Artists.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('50', this)">50 shades of Grey</a>
+                    </div>
+                    
+                </div>
+                <img src="sam.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="James Cameron">
+          <div class="container">
+            <div class="row">
+              <p class="h1">James Cameron</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                        Born 16 August 1954, is a Canadian film-maker, producer, screenwriter and editor. He was the first to produce and direct a film costing over $100 million in Terminator 2: Judgment Day.
+                        Cameron studied art as a child; he later provided the drawings that figured prominently in Titanic. In 1971 his family moved to California. After studying physics at California State University at Fullerton, Cameron worked at a series of jobs, including machinist and truck driver, before a viewing of Star Wars (1977) inspired him to try his hand at moviemaking.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Terminator', this)">Terminator: Dark Fate</a>
+                    </div>
+                    
+                </div>
+                <img src="james.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Michael Bay">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Michael Bay</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                     Born 17 February 1965, is an American film director and producer. It is known for producing action films with big budgets, fast cuts and extensive use of special effects, especially explosions.
+                     A graduate of Wesleyan University, Michael Bay spent his 20s working on advertisements and music videos. His first projects after film school were in the music video business. He created music videos for Tina Turner, Meat Loaf, Lionel Richie, Wilson Phillips, Donny Osmond and Divinyls. His work won him recognition and a number of MTV award nominations. He also filmed advertisements for Nike, Reebok, Coca-Cola, Budweiser and Miller Lite. He won the Grand Prix Clio for Commercial of the Year for his "Got Milk/Aaron Burr" commercial. At Cannes, he has won the Gold Lion for The Best Beer campaign for Miller Lite, as well as the Silver for "Got Milk". In 1995, Bay was honored by the Directors Guild of America as Commercial Director of the Year. That same year, he also directed his first feature film, Os Bad Boys (1995), starring Will Smith and Martin Lawrence, which grossed more than $160 million, worldwide. His follow-up film, O Rochedo (1996), starring Sean Connery and Nicolas Cage, was also hugely successful, making Bay the director du jour.        
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Transformers', this)">Transformers: The Last Knight</a>
+                    </div>
+                    
+                </div>
+                <img src="michael.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Peter Jackson">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Peter Jackson</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                        Born 31 October 1961, is a New Zealander screenwriter, film-maker and film producer. Became known for directing the epic The Lord of the Rings epic trilogy.
+                        Without any formal training, Jackson has directed a number of successful films ranging across all genres. He is most well-known for his film adaptation of J.R.R. Tolkien's Lord of the Rings trilogy, which has won numerous awards. He stayed with the Tolkien fantasy brand when The Hobbit film series was released.      
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Mortal', this)">Mortal Engines</a>
+                    </div>
+                    
+                </div>
+                <img src="Peter.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Russo brothers">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Russo brothers</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                        They are American directors, producers, screenwriters, and actors. They are best known for directing four films in the Marvel Cinematic Universe: Captain America: The Winter Soldier (2014), Captain America: Civil War (2016), Avengers: Infinity War (2018), and Avengers: Endgame (2019).
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Mortal', this)">Captain America: Civil War</a>
+                    </div>
+                    
+                </div>
+                <img src="Russo.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Steven Spielberg">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Steven Spielberg</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                    Born 19 December 1946, is an award-winning film-maker, film producer, screenwriter and American entrepreneur. Is the director with the most films on the American Film Institute's list of the 100 Best American Movies of All Time.
+                    He is considered one of the founding pioneers of the New Hollywood era and one of the most popular directors and producers in film history. Spielberg started in Hollywood directing television and several minor theatrical releases. He became a household name as the director of Jaws (1975), which was critically and commercially successful and is considered the first summer blockbuster. His subsequent releases focused typically on science fiction/adventure films such as Close Encounters of the Third Kind (1977), Raiders of the Lost Ark (1981) and its later sequels as part of the Indiana Jones franchise, E.T. the Extra-Terrestrial (1982) and Jurassic Park (1993), which became archetypes of modern Hollywood escapist filmmaking.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Ready', this)">Ready Player One</a>
+                    </div>
+                    
+                </div>
+                <img src="steven.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--ACTORS-->
+        <div class="tabcontent" id="Actors">
+          <div class="container">
+            <div class="row">
+                <p class="h1">Actors</p>
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="jamie.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="aa1(this)" type="button" class="btn btn-dark" id="ba1">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Jamie Dornan', this)">Jamie Dornan</h5>
+                          <p class="card-text">Born 1 May 1982, is a North Irish actor, model and musician. <a class="card-link" onclick="openPage('Jamie Dornan', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Arnold.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="aa2(this)" type="button" class="btn btn-dark" id="ba2">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Arnold Schwarzenegger', this)">Arnold Schwarzenegger</h5>
+                          <p class="card-text">Born 19 July 1947, is an Austro-American bodybuilder, actor, businessman...<a class="card-link" onclick="openPage('Arnold Schwarzenegger', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="mark.jpg" class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="aa3(this)" type="button" class="btn btn-dark" id="ba3">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Mark Wahlberg', this)">Mark Wahlberg</h5>
+                          <p class="card-text">Born 5 June 1971, is an American actor, rapper and film and television...<a class="card-link" onclick="openPage('Mark Wahlberg', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Stephen.jpg"  class="card-img-top" alt="3" width="280" height="500">
+                        <button onclick="aa4(this)" type="button" class="btn btn-dark" id="ba4">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Stephen Lang', this)">Stephen Lang</h5>
+                          <p class="card-text">Born 11 Jult 1952, he is mainly known for being the villainous...<a class="card-link" onclick="openPage('Stephen Lang', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="chris.jpg"  class="card-img-top" alt="3" width="280" height="500">
+                          <button onclick="aa5(this)" type="button" class="btn btn-dark" id="ba5">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Chris Evans', this)">Chris Evans</h5>
+                            <p class="card-text">Born 13 June 1981, he started his career on the television series Opposite Sex...<a class="card-link" onclick="openPage('Chris Evans', this)">More</a></p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="tye.jpg" class="card-img-top" alt="3" width="280" height="500">
+                          <button onclick="aa6(this)" type="button" class="btn btn-dark" id="ba6">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Tye Sheridan', this)">Tye Sheridan</h5>
+                            <p class="card-text">Born 11 November 1996, is an American actor best known for playing Steve...<a class="card-link" onclick="openPage('Tye Sheridan', this)">More</a></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        <div class="tabcontent" id="Jamie Dornan">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Jamie Dornan</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                      Born 1 May 1982, is a North Irish actor, model and musician. He has two older sisters: Liesa, who works for Disney in London, and Jess, a stylist trained in Falmouth, England. Her father, Professor, Jim Dornan, is an obstetrician and gynecologist who also considered becoming an actor. Dornan was 16 when his mother, Lorna, died of pancreatic cancer. Dornan is a cousin of actress Greer Garson. His grandparents on both sides of his family were lay Methodist preachers.
+
+He attended Methodist College Belfast, where he played rugby and participated in the theater department. He later attended Teesside University, but dropped out and moved to London to start his acting career.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('50', this)">50 shades of Grey</a>
+                    </div>
+                    
+                </div>
+                <img src="jamie.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Arnold Schwarzenegger">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Arnold Schwarzenegger</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                      Born 19 July 1947, is an Austro-American bodybuilder, actor, businessman and politician, having served as the 38th Governor of the state of California from 2004 to 2011. Son of a severe policeman, since he was a young man he liked to practice sports. At the age of 15 he started doing weight training and started intensive training with Kurt Marnul, Mr. Austria. He dreamed of going to the United States and become a bodybuilding champion and movie star.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Terminator', this)">Terminator: Dark Fate</a>
+                    </div>
+                    
+                </div>
+                <img src="Arnold.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Mark Wahlberg">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Mark Wahlberg</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                    Born 5 June 1971, is an American actor, rapper and film and television producer.. One of his brothers is Donnie Wahlberg, who joined the boysband New Kids on the Block. In his youth, Mark was involved in petty crimes and drugs. He was even sentenced to two years in prison at the Deer Island House of Correction in Boston, but only served 45 days. Wahlberg cites this prison time as a motivation to improve his life.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Transformers', this)">Transformers: The Last Knight</a>
+                    </div>
+                    
+                </div>
+                <img src="mark.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Stephen Lang">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Stephen Lang</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                      Born 11 Jult 1952, he is mainly known for being the villainous Colonel Miles Quaritch in Avatar and Commander Taylor in Newfoundland. He started in theatre on Broadway but is well known for his film portrayals of Stonewall Jackson in Gods and Generals (2003), George Pickett in Gettysburg (1993), and his 2009 roles as Colonel Miles Quaritch in Avatar and as Texan lawman Charles Winstead in Public Enemies. Lang was the co-artistic director (along with Carlin Glynn and Lee Grant) of the famed Actor's Studio at its headquarters in New York City from 2004 to 2006.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Mortal', this)">Mortal Engines</a>
+                    </div>
+                    
+                </div>
+                <img src="Stephen.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Chris Evans">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Chris Evans</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                      Born 13 June 1981, he started his career on the television series Opposite Sex (2000), and has since appeared in several films, being best known for playing Captain America in the Marvel Cinematic Universe.
+                    Evans' first credited appearance was in a short educational video entitled Biodiversity: Wild About Life! in 1997. In 1999, Evans was "Tyler" in Hasbro's board game Mystery Date. The 1999 version of the game includes an "electronic talking phone" to set up "meetings." Chris Evans is at the box using the phone as "Tyler", the "beach" date.
+                    After filming Not Another Teen Movie, Evans landed lead roles in The Perfect Score and Cellular, then starred in two independent films in Chicago: Dirk Wittenborn's Fierce People, playing the sinister Bryce, and in London, as a user of drugs with relationship problems. Then he played superhero Johnny Storm, known as the Human Torch, in the 2005 adaptation of the Fantastic Four comics and reprized the role in 2007 in the sequel Fantastic Four and the Silver Surfer. That year, he starred as the engineer-astronaut Mace in Danny Boyle's sci-fi movie called, Sunshine.
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Captain', this)">Captain America: Civil War</a>
+                    </div>
+                    
+                </div>
+                <img src="chris.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Tye Sheridan">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Tye Sheridan</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Biography</h5>
+                    <p class="p-0">
+                    Born 11 November 1996, is an American actor best known for playing Steve in the film The Tree of Life, Cyclops in X-Men: Apocalypse and Wade Watts in Ready Player One.
+                    Tye Sheridan has emerged as one of Hollywood's most sought after young talents. Most recently, he was seen in the highly anticipated science fiction film Ready Player One: Jogador 1 (2018) produced and directed by Steven Spielberg, playing the lead character Wade Watts. He also starred as young Cyclops/Scott Summers in X-Men: Apocalipse (2016). In 2019. he will reprise the role of Cyclops/Scott Summers in X-Men: Fénix Negra (2019), he will also be seen in indie drama The Mountain (2018) and Friday's Child (2018) , as well as crime thriller O Rececionista (2020).
+                    </p>
+                    <div class="credit_summary_item">
+                        <h5 class="d-inline">Participate in: </h5>
+                        <a class="a" onclick="openPage('Ready', this)">Ready Player One</a>
+                    </div>
+                                    
+                </div>
+                <img src="tye.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--STUDIOS-->
+        <div class="tabcontent" id="Studios">
+          <div class="container">
+            <div class="row">
+                <p class="h1">Studios</p>
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="universal.jpg" class="card-img-top" alt="2" width="280" height="300">
+                        <button onclick="as1(this)" type="button" class="btn btn-dark" id="bs1">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Universal', this)">Universal Pictures</h5>
+                          <p class="card-text">Founded in 1912 by the German Carl Laemmle, today it is consolidated as one of the oldest film studios still active in the world. <a class="card-link" onclick="openPage('Universal', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="lionsgate.jpg" class="card-img-top" alt="2" width="280" height="300">
+                        <button onclick="as2(this)" type="button" class="btn btn-dark" id="bs2">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Lions', this)">Lions Gate Entertainment</h5>
+                          <p class="card-text">Is an independent film and television production company founded in Vancouver and currently based...<a class="card-link" onclick="openPage('Lions', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="disney.png" class="card-img-top" alt="2" width="280" height="300">
+                        <button onclick="as3(this)" type="button" class="btn btn-dark" id="bs3">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Walt', this)">Walt Disney Pictures</h5>
+                          <p class="card-text">Is an American film studio and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company. The subsidiary...<a class="card-link" onclick="openPage('Walt', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="sony.jpg" class="card-img-top" alt="2" width="280" height="300">
+                        <button onclick="as4(this)" type="button" class="btn btn-dark" id="bs4">Add To Favorites?</button>
+                        <div class="card-body">
+                          <h5 class="card-title" onclick="openPage('Columbia', this)">Columbia Pictures</h5>
+                          <p class="card-text">Is an American film producer and distributor and is one of the six largest film studios in the world. Is located in Culver City, California...<a class="card-link" onclick="openPage('Columbia', this)">More</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="viacom.jpg" class="card-img-top" alt="2" width="280" height="300">
+                          <button onclick="as5(this)" type="button" class="btn btn-dark" id="bs5">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Paramount', this)">Paramount Pictures</h5>
+                            <p class="card-text"> Founded in 1912 by Adolph Zukor, is one of the leading film studios in the United States. <a class="card-link" onclick="openPage('Paramount', this)">More</a></p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                          <img src="warner.jpg" class="card-img-top" alt="2" width="280" height="300">
+                          <button onclick="as6(this)" type="button" class="btn btn-dark" id="bs6">Add To Favorites?</button>
+                          <div class="card-body">
+                            <h5 class="card-title" onclick="openPage('Warner', this)">Warner Bros. Pictures</h5>
+                            <p class="card-text">Is an American film and television entertainment producer and distributor. It is currently one of the five Hollywood film...<a class="card-link" onclick="openPage('Warner', this)">More</a></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Universal">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Universal Pictures</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">History</h5>
+                    <p class="p-0">
+                      Founded in 1912 by the German Carl Laemmle, today it is consolidated as one of the oldest film studios still active in the world. Independent Moving Pictures Company (IMP) was merged with Powers Picture Plays, Bison Life Motion Picture Company, Rex, Nestor and Champion, and Universal started to operate two studios in Los Angeles, one in Edendale and the former Nestor Studios, at Sunset Boulevard with Gower Street [2]. In 1913, the Victor Film Company, a film company that was founded by the first major American film star Florence Lawrence and her husband Harry Solter, was acquired, being fully absorbed by Universal in 1917. In 1915, Universal City, in the valley of San Fernando, California, fully equipped for filming indoor and outdoor scenes. In 1925 the name was changed to Universal Pictures, Inc.
+
+Several stars began their career at Universal City, among them are Rodolfo Valentino and Wallace Reid, the director Erich von Stroheim, where he made his greatest hits, as well as Irving Thalberg, who would later be one of the main responsible for the "golden age" Metro-Goldwyn-Mayer, and Harry Cohn, later director of Columbia Pictures.
+                    </p>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Associated Movies: </h5>
+                      <a class="a" onclick="openPage('50', this)">50 Shades of Grey</a>
+                      <a class="a" >;</a>
+                      <a class="a" onclick="openPage('Mortal', this)">Mortal Engines</a>
+
+                    </div>
+
+                </div>
+                <img src="universal.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Lions">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Lions Gate Entertainment</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">History</h5>
+                    <p class="p-0">
+                      Is an independent film and television production company founded in Vancouver and currently based in Santa Monica (Caslifornia, United States). He produced several hits like The Hunger Games, and comedies like Good Luck Chuck and My Best Friend's Girl.
+                        Lionsgate was formed in 1997 by Frank Giustra with a $16 million investment including another $40 million from other investors which included Keyur Patel and Yorkton Securities' executives such as G. Scott Paterson. Giustra had recently retired as CEO from Yorkton, an investment bank, and Paterson was then president. Giustra then merged Lionsgate with Toronto Stock Exchange listed Beringer Gold Corp. To take the company public. 
+                        Lionsgate Entertainment World is an indoor interactive experience centre based on Lionsgate's blockbuster films, such as The Hunger Games, The Divergent Series and Now You See Me, is set to open on Hengqin, Zhuhai, China in the first half of 2019. The Lionsgate project is an investment by Hong Kong conglomerate Lai Sun Group and designed and produced by Thinkwell Group.
+                    </p>
+                    
+                </div>
+                <img src="lionsgate.jpg" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Walt">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Walt Disney Pictures</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">History</h5>
+                    <p class="p-0">
+                      Is an American film studio and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company. The subsidiary is the leading producer of live action films within the Walt Disney Studios unit and is headquartered at Walt Disney Studios in Burbank, California.
+                      The studio's predecessor (and the modern-day The Walt Disney Company's as a whole) was founded as the Disney Brothers Cartoon Studio, by filmmaker Walt Disney and his business partner and brother, Roy, in 1923.
+
+The creation of Mickey Mouse and subsequent short films and merchandise generated revenue for the studio which was renamed as The Walt Disney Studio at the Hyperion Studio in 1926. In 1929, it was renamed again to Walt Disney Productions. The studio's streak of success continued in the 1930s, culminating with the 1937 release of the first feature-length animated film, Snow White and the Seven Dwarfs, which becomes a huge financial success. With the profits from Snow White, Walt relocated to a third studio in Burbank, California.
+
+In the 1940s, Disney began experimenting with full-length live-action films, with the introduction of hybrid live action-animated films such as The Reluctant Dragon (1941) and Song of the South (1946). That same decade, the studio began producing nature documentaries with the release of Seal Island (1948), the first of the True-Life Adventures series and a subsequent Academy Award winner for Best Live-Action Short Film.
+
+Walt Disney Productions had its first fully live-action film in 1950 with the release of Treasure Island, considered by Disney to be the official conception for what would eventually evolve into the modern-day Walt Disney Pictures. By 1953, the company ended their agreements with such third-party distributors as RKO Radio Pictures and United Artists and formed their own distribution company, Buena Vista Distribution.
+                    </p>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Associated Movies: </h5>
+                      <a class="a" onclick="openPage('Terminator', this)">Terminator: Dark Fate</a>
+                      <a class="a" >;</a>
+                      <a class="a" onclick="openPage('Captain', this)">Captain America: Civil War</a>
+                    </div>
+
+                </div>
+                <img src="disney.png" class="ml-3" alt="1" width="400" height="570">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Columbia">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Columbia Pictures</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">History</h5>
+                    <p class="p-0">
+                      Is an American film producer and distributor and is one of the six largest film studios in the world. Is located in Culver City, California in the United States.
+                     The studio was founded 19 June 1918, as Cohn-Brandt-Cohn (CBC) Film Sales by brothers Jack and Harry Cohn and Jack's best friend Joe Brandt, and released its first feature film in August 1922. Brandt was president of CBC Film Sales, handling sales, marketing and distribution from New York along with Jack Cohn, while Harry Cohn ran production in Hollywood. The studio's early productions were low-budget short subjects: "Screen Snapshots", the "Hall Room Boys" (the vaudeville duo of Edward Flanagan and Neely Edwards), and the Chaplin imitator Billy West. The start-up CBC leased space in a Poverty Row studio on Hollywood's famously low-rent Gower Street. Among Hollywood's elite, the studio's small-time reputation led some to joke that "CBC" stood for "Corned Beef and Cabbage". Brandt eventually tired of dealing with the Cohn brothers, and in 1932 sold his one-third stake to Harry Cohn, who took over as president.
+                    </p>
+                    
+                </div>
+                <img src="sony.jpg" class="ml-3" alt="1" width="400" height="500">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Paramount">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Columbia Pictures</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">History</h5>
+                    <p class="p-0">
+                      Is an American film producer and distributor and is one of the six largest film studios in the world. Is located in Culver City, California in the United States.
+                     The studio was founded 19 June 1918, as Cohn-Brandt-Cohn (CBC) Film Sales by brothers Jack and Harry Cohn and Jack's best friend Joe Brandt, and released its first feature film in August 1922. Brandt was president of CBC Film Sales, handling sales, marketing and distribution from New York along with Jack Cohn, while Harry Cohn ran production in Hollywood. The studio's early productions were low-budget short subjects: "Screen Snapshots", the "Hall Room Boys" (the vaudeville duo of Edward Flanagan and Neely Edwards), and the Chaplin imitator Billy West. The start-up CBC leased space in a Poverty Row studio on Hollywood's famously low-rent Gower Street. Among Hollywood's elite, the studio's small-time reputation led some to joke that "CBC" stood for "Corned Beef and Cabbage". Brandt eventually tired of dealing with the Cohn brothers, and in 1932 sold his one-third stake to Harry Cohn, who took over as president.
+                    </p>
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Associated Movies: </h5>
+                      <a class="a" onclick="openPage('Transformers', this)">Transformers: The Last Knight</a>
+                    </div>
+
+                </div>
+                <img src="sony.jpg" class="ml-3" alt="1" width="400" height="500">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tabcontent" id="Warner">
+          <div class="container">
+            <div class="row">
+              <p class="h1">Warner Bros. Pictures</p>
+              <div class="media">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">History</h5>
+                    <p class="p-0">
+                      Is an American film and television entertainment producer and distributor. It is currently one of the five Hollywood film companies.
+                        Warner Bros. Entertainment Inc. (commonly known as Warner Bros. and abbreviated as WB; formerly traded as Warner Bros. Inc.) is an American diversified multinational mass media and entertainment conglomerate headquartered at the Warner Bros. Studios complex in Burbank, California, and a subsidiary of AT&T's WarnerMedia through its Studios and Networks Group division. Founded in 1923 by brothers Harry, Albert, Sam, and Jack Warner, the company established itself as a leader in the American film industry before diversifying into animation, television, and video games, and is one of the "Big Five" major American film studios, as well as a member of the Motion Picture Association (MPA).
+                    <div class="credit_summary_item">
+                      <h5 class="d-inline">Associated Movies: </h5>
+                      <a class="a" onclick="openPage('Ready', this)">Ready Player One</a>
+                    </div>
+    
+                </div>
+                <img src="warner.jpg" class="ml-3" alt="1" width="400" height="500">
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--PARAMETROS-->
+
+        <div class="tabcontent" id="Register">
+          <div class="form_bg">
+            <div class="container">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6" >
+                  <form class="form_horizontal">
+                    <div class="form_icon"><i class="fa fa-user-circle"></i></div>
+                    <h3 class="title">Register</h3>
+                    <div class="form-group"> 
+                      <span class="input-icon"><i class="fa fa-user"></i></span> 
+                      <input id="newUsername" class="form-control" type="username" placeholder="username" required>
+                    </div>             
+                    <div class="form-group">  
+                      <span class="input-icon"><i class="fa fa-lock"></i></span>
+                      <input id="newPassword" class="form-control" type="password" placeholder="password" required>
+                    </div>             
+                    <button class="btn signin" onclick="registerUser()">Register</button>
+                    <button class="btn signin" onclick="openPage('Login', this)"><i class="fa fa-arrow-left"></i>Login</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="tabcontent" id="Recovery">
+          <div class="form_bg">
+            <div class="container">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6" >
+                  <form class="form_horizontal">
+                    <div class="form_icon"><i class="fa fa-user-circle"></i></div>
+                    <h3 class="title">Recovery</h3>
+                    <div class="form-group">
+                      <span class="input-icon"><i class="fa fa-user"></i></span>
+                      <input id="email" class="form-control" type="email" placeholder="email" required>
+                    </div>        
+                    <button class="btn signin" onclick="done()">Recovery</button>
+                    <ul class="form-options">
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+
+        <!--Profile-->
+        <div class="tabcontent" id="edit">
+          <div class="container">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="h3" > My Profile  <i class="fa fa-user-o"></i></div>
+                <button type="button" class="btn btn-primary" onclick="openPage('edit', this)">Edit account</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fm', this)">Favourite movies</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fa', this)">Favourite actors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fd', this)">Favourite directors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fs', this)">Favourite studios</button>
+            </div>
+        <form class="form form-edit">   
+          <div class= form-pass>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Old password</label>
+              <input id="opassword" type="password" class="form-control">
+            </div>
+          <div class="form-group">
+            <label for="exampleInputPasswor2">New password</label>
+            <input id="cpassword" type="password" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword3">Confirm new password</label>
+              <input id="cpassword2" type="password" class="form-control" >
+            </div>
+          <button id="cp" type="submit" class="btn btn-primary" onclick="updateP()">Submit</button>
+          </div>
+          <div class= form-pass2>
+          <div class="form-group">
+              <label for="exampleInputPassword1">New username</label>
+              <input type="password" class="form-control" >
+            </div>
+          <div class="form-group">
+            <label for="exampleInputPasswor2">Confirm username</label>
+            <input type="password" class="form-control" >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          </div>
+        </form>
+        </div>
+
+        <div class="tabcontent" id="fa">
+          <div class="container">            
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="h3" > My Favorites  <i class="fa fa-star"></i></div>
+                <button type="button" class="btn btn-secondary" onclick="openPage('edit', this)">Edit account</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fm', this)">Favourite movies</button>
+                <button type="button" class="btn btn-primary" onclick="openPage('fa', this)">Favourite actors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fd', this)">Favourite directors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fs', this)">Favourite studios</button>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3">
+              <div class="col mb-4" id= "a1">
+                <div class="card">
+                  <img src="jamie.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="ra1(this)" type="button" class="btn btn-dark" id="ba1">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Jamie Dornan', this)">Jamie Dornan</h5>
+                    <p class="card-text">Born 1 May 1982, is a North Irish actor, model and musician. <a class="card-link" onclick="openPage('Jamie Dornan', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="a2">
+                <div class="card">
+                  <img src="Arnold.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="ra2(this)" type="button" class="btn btn-dark" id="ba2">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Arnold Schwarzenegger', this)">Arnold Schwarzenegger</h5>
+                    <p class="card-text">Born 19 July 1947, is an Austro-American bodybuilder, actor, businessman...<a class="card-link" onclick="openPage('Arnold Schwarzenegger', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="a3">
+                <div class="card">
+                  <img src="mark.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="ra3(this)" type="button" class="btn btn-dark" id="ba3">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Mark Wahlberg', this)">Mark Wahlberg</h5>
+                    <p class="card-text">Born 5 June 1971, is an American actor, rapper and film and television...<a class="card-link" onclick="openPage('Mark Wahlberg', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="a4">
+                <div class="card">
+                  <img src="Stephen.jpg"  class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="ra4(this)" type="button" class="btn btn-dark" id="ba4">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Stephen Lang', this)">Stephen Lang</h5>
+                    <p class="card-text">Born 11 Jult 1952, he is mainly known for being the villainous...<a class="card-link" onclick="openPage('Stephen Lang', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="a5">
+                  <div class="card">
+                    <img src="chris.jpg"  class="card-img-top" alt="3" width="280" height="500">
+                    <button onclick="ra5(this)" type="button" class="btn btn-dark" id="ba5">Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('Chris Evans', this)">Chris Evans</h5>
+                      <p class="card-text">Born 13 June 1981, he started his career on the television series Opposite Sex...<a class="card-link" onclick="openPage('Chris Evans', this)">More</a></p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col mb-4" id="a6">
+                  <div class="card">
+                    <img src="tye.jpg" class="card-img-top" alt="3" width="280" height="500">
+                    <button onclick="ra6(this)" type="button" class="btn btn-dark" id="ba6">Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('Tye Sheridan', this)">Tye Sheridan</h5>
+                      <p class="card-text">Born 11 November 1996, is an American actor best known for playing Steve...<a class="card-link" onclick="openPage('Tye Sheridan', this)">More</a></p>
+                    </div>
+                  </div>
+              </div>
+          </div>    
+              </div>
+        </div>
+
+        <div class="tabcontent" id="fd">
+          <div class="container">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="h3" > My Favorites  <i class="fa fa-star"></i></div>
+                <button type="button" class="btn btn-secondary" onclick="openPage('edit', this)">Edit account</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fm', this)">Favourite movies</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fa', this)">Favourite actors</button>
+                <button type="button" class="btn btn-primary" onclick="openPage('fd', this)">Favourite directors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fs', this)">Favourite studios</button>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3">
+              <div class="col mb-4" id="d1">
+                <div class="card dir">
+                  <img src="sam.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="dr1(this)" type="button" class="btn btn-dark" id="bd1">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Sam Taylor-Johnson', this)">Sam Taylor-Johnson</h5>
+                    <p class="card-text">Born 8 October 1963, is an English film director who has directed films, short films, and television productions. <a class="card-link" onclick="openPage('Sam Taylor-Johnson', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="d2">
+                <div class="card dir">
+                  <img src="james.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="dr2(this)" type="button" class="btn btn-dark" id="bd2">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('James Cameron', this)">James Cameron</h5>
+                    <p class="card-text">Born 16 August 1954, is a Canadian film-maker, producer, screenwriter and editor.
+                      He was the first to produce and...<a class="card-link" onclick="openPage('James Cameron', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="d3">
+                <div class="card">
+                  <img src="michael.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="dr3(this)" type="button" class="btn btn-dark" id="bd3">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Michael Bay', this)">Michael Bay</h5>
+                    <p class="card-text">Born 17 February 1965, is an American film director and producer. It is known for producing action films with...<a class="card-link" onclick="openPage('Michael Bay', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="d4">
+                <div class="card">
+                  <img src="Peter.jpg" class="card-img-top" alt="3" width="280" height="500">
+                  <button onclick="dr4(this)" type="button" class="btn btn-dark" id="bd4">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Peter Jackson', this)">Peter Jackson</h5>
+                    <p class="card-text">Born 31 October 1961, is a New Zealander screenwriter, film-maker and film producer. 
+                      Became known for directing...<a class="card-link" onclick="openPage('Peter Jackson', this)">More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="d5">
+                  <div class="card">
+                    <img src="Russo.jpg" class="card-img-top" alt="3" width="280" height="500">
+                    <button onclick="dr5(this)" type="button" class="btn btn-dark" id="bd5">Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('Russo brothers', this)">Russo brothers</h5>
+                      <p class="card-text">They are American directors, producers, screenwriters, and actors. They are best known for directing four films...<a class="card-link" onclick="openPage('Russo brothers', this)">More</a></p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col mb-4" id="d6">
+                  <div class="card">
+                    <img src="steven.jpg" class="card-img-top" alt="3" width="280" height="500">
+                    <button onclick="dr6(this)" type="button" class="btn btn-dark" id="bd6">Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('Steven Spielberg', this)">Steven Spielberg</h5>
+                      <p class="card-text">Born 19 December 1946, is an award-winning film-maker, film producer, screenwriter and American... <a class="card-link" onclick="openPage('Steven Spielberg', this)">More</a></p>
+                    </div>
+                  </div>
+              </div>
+          </div>    
+              </div>
+
+        </div>
+
+        <div class="tabcontent" id="fm">
+          <div class="container">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="h3" > My Favorites  <i class="fa fa-star"></i></div>
+                <button type="button" class="btn btn-secondary" onclick="openPage('edit', this)">Edit account</button>
+                <button type="button" class="btn btn-primary" onclick="openPage('fm', this)">Favourite movies</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fa', this)">Favourite actors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fd', this)">Favourite directors</button>
+                <button type="button" class="btn btn-secondary" onclick="openPage('fs', this)">Favourite studios</button>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3">
+              <div class="col mb-4" id="m1">
+                  <div class="card">  
+                    <img src="50.jpg" onclick="openPage('50', this)" class="card-img-top" alt="1" width="280" height="525">
+                    <button onclick="r1(this)" type="button" class="btn btn-dark" >Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('50', this)">50 shades of Grey </h5>
+                      <p class="card-text">Romance</p>
+                    </div>
+                  </div>
+                </div>
+              <div class="col mb-4" id="m2">
+                <div class="card">
+                  <img src="terminator-dark-fate.jpg" onclick="openPage('Terminator', this)" class="card-img-top" alt="1" width="280" height="525">
+                  <button onclick="r2(this)" type="button" class="btn btn-dark" >Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Terminator', this)">Terminator: Dark Fate</h5>
+                    <p class="card-text">Action/Science fiction</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="m3">
+                <div class="card">
+                  <img src="Transformer.jpg" onclick="openPage('Transformers', this)" class="card-img-top" alt="1" width="280" height="525">
+                  <button onclick="r3(this)" type="button" class="btn btn-dark" >Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Transformers', this)">Transformers: The Last Knight</h5>
+                    <p class="card-text">Action/Adventure/Science fiction</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="m4">
+                <div class="card">
+                  <img src="mortal-engines.jpg" onclick="openPage('Mortal', this)" class="card-img-top" alt="1" width="280" height="525">
+                  <button onclick="r4(this)" type="button" class="btn btn-dark" >Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Mortal', this)">Mortal Engines</h5>
+                    <p class="card-text">Adventure/Science fiction</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4" id="m5">
+                  <div class="card">
+                    <img src="civil war.jpg" onclick="openPage('Captain', this)" class="card-img-top" alt="1" width="280" height="525">
+                    <button onclick="r5(this)" type="button" class="btn btn-dark" >Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('Captain', this)">Captain America: Civil War</h5>
+                      <p class="card-text">Action/Adventure</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4" id="m6">
+                  <div class="card">
+                    <img src="jogador 1.jpg" onclick="openPage('Ready', this)" class="card-img-top" alt="1" width="280" height="525">
+                    <button onclick="r6(this)" type="button" class="btn btn-dark" >Remove from Favorites?</button>
+                    <div class="card-body">
+                      <h5 class="card-title" onclick="openPage('Ready', this)">Ready Player One</h5>
+                      <p class="card-text">Action/Adventure</p>
+                    </div>
+                  </div>  
+                </div>                     
+          </div>   
+              </div>
+
+        </div>
+
+        <div class="tabcontent" id="fs">
+          <div class="container">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <div class="h3" > My Favorites  <i class="fa fa-star"></i></div>
+              <button type="button" class="btn btn-secondary" onclick="openPage('edit', this)">Edit account</button>
+              <button type="button" class="btn btn-secondary" onclick="openPage('fm', this)">Favourite movies</button>
+              <button type="button" class="btn btn-secondary" onclick="openPage('fa', this)">Favourite actors</button>
+              <button type="button" class="btn btn-secondary" onclick="openPage('fd', this)">Favourite directors</button>
+              <button type="button" class="btn btn-primary" onclick="openPage('fs', this)">Favourite studios</button>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4" id="s1">
+              <div class="card">
+                <img src="universal.jpg" class="card-img-top" alt="2" width="280" height="300">
+                <button onclick="rs1(this)" type="button"  class="btn btn-dark">Remove from Favorites?</button>
+                <div class="card-body">
+                  <h5 class="card-title" onclick="openPage('Universal', this)">Universal Pictures</h5>
+                  <p class="card-text">Founded in 1912 by the German Carl Laemmle, today it is consolidated as one of the oldest film studios... <a class="card-link" onclick="openPage('Universal', this)">More</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4" id="s2">
+              <div class="card">
+                <img src="lionsgate.jpg" class="card-img-top" alt="2" width="280" height="300">
+                <button onclick="rs2(this)" type="button" class="btn btn-dark">Remove from Favorites?</button>
+                <div class="card-body">
+                  <h5 class="card-title" onclick="openPage('Lions', this)">Lions Gate Entertainment</h5>
+                  <p class="card-text">Is an independent film and television production company founded in Vancouver and currently based...<a class="card-link" onclick="openPage('Lions', this)">More</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4" id="s3">
+              <div class="card">
+                <img src="disney.png" class="card-img-top" alt="2" width="280" height="300">
+                <button onclick="rs3(this)" type="button" class="btn btn-dark">Remove from Favorites?</button>
+                <div class="card-body">
+                  <h5 class="card-title" onclick="openPage('Walt', this)">Walt Disney Pictures</h5>
+                  <p class="card-text">Is an American film studio and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company. The subsidiary...<a class="card-link" onclick="openPage('Walt', this)">More</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4" id="s4">
+              <div class="card">
+                <img src="sony.jpg" class="card-img-top" alt="2" width="280" height="300">
+                <button onclick="rs4(this)" type="button" class="btn btn-dark">Remove from Favorites?</button>
+                <div class="card-body">
+                  <h5 class="card-title" onclick="openPage('Columbia', this)">Columbia Pictures</h5>
+                  <p class="card-text">Is an American film producer and distributor and is one of the six largest film studios in the world. <a class="card-link" onclick="openPage('Columbia', this)">More</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4" id="s5">
+                <div class="card">
+                  <img src="viacom.jpg" class="card-img-top" alt="2" width="280" height="300">
+                  <button onclick="rs5(this)" type="button" class="btn btn-dark">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Paramount', this)">Paramount Pictures</h5>
+                    <p class="card-text"> Founded in 1912 by Adolph Zukor, is one of the leading film studios in the United States. <a class="card-link" onclick="openPage('Paramount', this)">More</a></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col mb-4" id="s6">
+                <div class="card">
+                  <img src="warner.jpg" class="card-img-top" alt="2" width="280" height="300">
+                  <button onclick="rs6(this)" type="button" class="btn btn-dark">Remove from Favorites?</button>
+                  <div class="card-body">
+                    <h5 class="card-title" onclick="openPage('Warner', this)">Warner Bros. Pictures</h5>
+                    <p class="card-text">Is an American film and television entertainment producer and distributor. It is currently one of the five Hollywood film...<a class="card-link" onclick="openPage('Warner', this)">More</a></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+              </div>
+
+        </div>
+
+    </header>
+
+</body>
+</html>
+         
