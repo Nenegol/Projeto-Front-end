@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back-Office</title>
+    <link rel="stylesheet" type="text/css" href="testeM.css">
+    <link rel="stylesheet" type="text/css" href="testeL.css">
+    <link rel="stylesheet" type="text/css" href="testeinf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/primer-css/build/build.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="code.js"></script>
+  </head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <img class="logo" src="icon.png" class="card-link" onclick="openPage('Home', this)"></img>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <class class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openPage('edit', this)" id="lg">Admin
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <button type="button" onclick="openPage('Loginad',this  )" class="btn btn-outline-none "><i class="fa fa-power-off"></i></button>
+            </class>
+            </ul>
+            </div>
+          </div>
+        </div>
+     </nav>
+
+    <div class="tabcontent" id="Loginad">
+        <div class="form_bg">
+          <div class="container">
+            <div class="row justify-content-center align-items-center h-100">
+              <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6" >
+                <form class="form_horizontal">
+                  <div class="form_icon"><i class="fa fa-user-circle"></i></div>
+                  <h3 class="title">Admin</h3>
+                  <div class="form-group">
+                    <span class="input-icon"><i class="fa fa-user"></i></span>
+                    <input id="adminusername" class="form-control" type="username" placeholder="username" required>
+                  </div>
+                  <div class="form-group">  
+                    <span class="input-icon"><i class="fa fa-lock"></i></span>
+                    <input id="adminpassword" class="form-control" type="password" placeholder="password" required>
+                  </div>             
+                  <submit class="btn signin" onclick="logad()">Login</submit>
+                </form>   
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+                <div class="tabcontent" id="edit">
+                    <div class="container">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                          <div class="h3" > Admin  <i class="fa fa-lock"></i></div>
+                          <button type="button" class="btn btn-secondary" onclick="openPage('admov', this)">Movies</button>
+                          <button type="button" class="btn btn-secondary" onclick="openPage('adact', this)">Actors</button>
+                          <button type="button" class="btn btn-secondary" onclick="openPage('adic', this)">Directors </button>
+                          <button type="button" class="btn btn-secondary" onclick="openPage('adstud', this)">Studios</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tabcontent" id="admov">
+                    <div class="container">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <div class="h3" > Admin  <i class="fa fa-lock"></i></div>
+                            <button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Movies</button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adact', this)">Actors</button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adic', this)">Directors </button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adstud', this)">Studios</button>
+                        </div>
+                  <table class="table table-striped table-dark">
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><div contenteditable>50 Shades of Grey</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td><div contenteditable>Tranformers:The Last Knight</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><div contenteditable>Ready Player One</div></td>
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                    
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td><div contenteditable>Mortal Engines</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>          
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td><div contenteditable>Terminator: Dark Fate</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                      
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td><div contenteditable>Captain America: Civil War</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                       
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  </div>
+
+                  <div class="tabcontent" id="adact">
+                    <div class="container">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <div class="h3" > Admin  <i class="fa fa-lock"></i></div>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('admov', this)">Movies</button>
+                            <button type="button" class="btn btn-primary" onclick="openPage('adact', this)">Actors</button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adic', this)">Directors </button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adstud', this)">Studios</button>
+                        </div>
+                  <table class="table table-striped table-dark">
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><div contenteditable>Jamie Dornan</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td><div contenteditable>Arnold Schwarzenegger</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><div contenteditable>Mark Wahlberg</div></td>
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                    
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td><div contenteditable>Stephen Lang</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>          
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td><div contenteditable>Chris Evans</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                      
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td><div contenteditable>Tye Sheridan</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                       
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  </div>
+
+                  <div class="tabcontent" id="adic">
+                    <div class="container">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <div class="h3" > Admin  <i class="fa fa-lock"></i></div>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('admov', this)">Movies</button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adact', this)">Actors</button>
+                            <button type="button" class="btn btn-primary" onclick="openPage('adic', this)">Directors </button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adstud', this)">Studios</button>
+                        </div>
+                  <table class="table table-striped table-dark">
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><div contenteditable>Sam Taylor-Johnson</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td><div contenteditable>James Cameron</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><div contenteditable>Michael Bay</div></td>
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                    
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td><div contenteditable>Peter Jackson</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>          
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td><div contenteditable>Russo brothers</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                      
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td><div contenteditable>Steven Spielberg</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                       
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  </div>
+
+                  <div class="tabcontent" id="adstud">
+                    <div class="container">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <div class="h3" > Admin  <i class="fa fa-lock"></i></div>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('admov', this)">Movies</button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adact', this)">Actors</button>
+                            <button type="button" class="btn btn-secondary" onclick="openPage('adic', this)">Directors </button>
+                            <button type="button" class="btn btn-primary" onclick="openPage('adstud', this)">Studios</button>
+                        </div>
+                  <table class="table table-striped table-dark">
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><div contenteditable>Universal</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td><div contenteditable>Lionsgate Entertainment</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><div contenteditable>Walt Disney Studios</div></td>
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                    
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td><div contenteditable>Columbia Pictures</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>          
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td><div contenteditable>Paramount Pictures</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                      
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td><div contenteditable>Warner Brothers Studios</div></td> 
+                        <td><button type="button" class="btn btn-primary" onclick="openPage('admov', this)">Submit</button></td>                       
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  </div>
+
+
+
+
+
+
+                  
+
+
+
+
+
